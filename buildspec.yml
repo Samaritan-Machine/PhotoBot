@@ -5,7 +5,7 @@ phases:
         python: 3.8
   build:
     commands:
-      -aws cloudformation package --template-file samTemp.yml --s3-bucket pipeline-samaritan --output-template-file UnpdatedsamTemp.yml
+      - aws cloudformation package --template-file samTemp.yml --s3-bucket pipeline-samaritan --output-template-file UnpdatedsamTemp.yml
 artifacts:
   files:
     - UnpdatedsamTemp.yml
