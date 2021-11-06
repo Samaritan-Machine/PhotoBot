@@ -1,5 +1,5 @@
 AWSTemplateFormatVersion: 2010-09-09
-Transform: 'AWS::Serverless-2021-10-31'
+Transform: 'AWS::Serverless-2016-10-31'
 Description: P1
 
 Resources:
@@ -35,7 +35,7 @@ Resources:
         getAZsAPI:
           Type: Api
           Properties:
-            Path: /uploadimage
+            Path: 
             Method: put
       Environment:
         Variables:
