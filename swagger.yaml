@@ -1,0 +1,45 @@
+openapi: 3.0.0
+servers:
+  - description:  FantaStock RestFull Service
+    url: https://fantastock/restapi/1.0
+info:
+  description: RestFull Services
+  version: "1.0.0"
+  title: FantaStock
+  contact:
+    email: you@your-company.com
+  license:
+    name: Apache 2.0
+    url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
+tags:
+  - name: Authentication
+  - name: Dashboard
+  - name: Competition pools
+  - name: Pool Data
+  - name: Payment
+paths:
+  /dashboard/contests/{userid}:
+    get:
+      tags:
+        - Dashboard
+      summary: get previous contests of the current user
+      operationId: dcontests
+      description: " get previous contests of the current user"
+      parameters:
+        - name: userid
+          in: path
+          description: user id 
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: return user contests
+          content:
+            clientes/json:
+              schema:
+                type: array
+                items:
+                  $ref: ''
+        '400':
+          description: Error
